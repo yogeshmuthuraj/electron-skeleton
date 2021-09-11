@@ -92,7 +92,11 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 );
 
-export default function AppBarDrawer(props) {
+export default function AppBarDrawer(props: {
+  currentSelected: string;
+  pageContent: any;
+  handlePageChange: any;
+}) {
   const classes = useStyles();
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);

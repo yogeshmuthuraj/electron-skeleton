@@ -54,17 +54,17 @@ export default class MenuBuilder {
 
   buildDarwinTemplate(): MenuItemConstructorOptions[] {
     const subMenuAbout: DarwinMenuItemConstructorOptions = {
-      label: 'Story Crusher',
+      label: 'AppName',
       submenu: [
         {
-          label: 'About Story Crusher',
+          label: 'About AppName',
           selector: 'orderFrontStandardAboutPanel:',
         },
         { type: 'separator' },
         { label: 'Services', submenu: [] },
         { type: 'separator' },
         {
-          label: 'Hide Story Crusher',
+          label: 'Hide AppName',
           accelerator: 'Command+H',
           selector: 'hide:',
         },

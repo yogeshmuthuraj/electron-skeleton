@@ -1,8 +1,8 @@
 {
-  "name": "Story-Crusher",
-  "productName": "StoryCrusher",
+  "name": "AppName",
+  "productName": "AppName",
   "version": "2.3.0",
-  "description": "Handy dashboard for Jira issues and Github pull request",
+  "description": "App Description",
   "main": "./main.prod.js",
   "author": {
     "name": "Yogesh Kumar Muthuraj",

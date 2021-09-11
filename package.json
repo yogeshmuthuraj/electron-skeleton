@@ -1,7 +1,7 @@
 {
-  "name": "Story-Crusher",
-  "productName": "StoryCrusher",
-  "description": "Handy dashboard for Jira issues and Github pull request",
+  "name": "AppName",
+  "productName": "AppName",
+  "description": "App Description",
   "scripts": {
     "build": "concurrently \"yarn build:main\" \"yarn build:renderer\"",
     "build:main": "cross-env NODE_ENV=production webpack --config ./.erb/configs/webpack.config.main.prod.babel.js",
@@ -33,7 +33,7 @@
     ]
   },
   "build": {
-    "productName": "Story Crusher",
+    "productName": "AppName",
     "appId": "",
     "files": [
       "dist/",
@@ -89,8 +89,8 @@
     ],
     "publish": {
       "provider": "github",
-      "owner": "Story Crusher",
-      "repo": "Story Crusher"
+      "owner": "AppName",
+      "repo": "AppName"
     }
   },
   "repository": {
@@ -278,5 +278,10 @@
     "baseBranches": [
       "next"
     ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   }
 }
