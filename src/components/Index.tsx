@@ -1,13 +1,51 @@
-import React from 'react';
-import DenseAppBar from './AppBar/MiniDrawer';
-import Homepage from './Homepage';
+import React, { useState } from 'react';
+import About from './About';
+import AppBarDrawer from './AppBarDrawer';
+import Apps from './Apps';
+import Contribute from './Contribute';
+import Notifications from './Notifications';
+import Settings from './Settings';
 
 const Index = () => {
   // awaits for new relic api calls , curl commands
+  const [currentSelected, setCurrentSelected] = useState('Apps');
+  let pageContent;
+
+  function pages(name: string) {
+    switch (name) {
+      case 'Apps':
+        pageContent = <Apps />;
+        break;
+      case 'Notifications':
+        pageContent = <Notifications />;
+        break;
+      case 'Settings':
+        pageContent = <Settings />;
+        break;
+      case 'Contribute':
+        pageContent = <Contribute />;
+        break;
+      case 'About':
+        pageContent = <About />;
+        break;
+      default:
+        break;
+    }
+  }
+
+  function handlePageChange(name: string) {
+    setCurrentSelected(name);
+  }
+
+  pages(currentSelected);
+
   return (
     <div>
-      <DenseAppBar />
-      <Homepage />
+      <AppBarDrawer
+        currentSelected={currentSelected}
+        pageContent={pageContent}
+        handlePageChange={handlePageChange}
+      />
     </div>
   );
 };
